@@ -3,6 +3,7 @@
 PREFERRED_PROVIDER_u-boot ?= "u-boot-artik"
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-artik"
 
-MACHINE_FEATURES += " pci rtc ethernet serial usbgadget usbhost"
+MACHINE_FEATURES += " bluetooth pci rtc ethernet serial usbgadget usbhost wifi"
 
 KERNEL_IMAGETYPE = "zImage"
+
