@@ -2,9 +2,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 LINUX_VERSION = "3.10.9"
 
-SRC_URI = "git://git@bitbucket.org/rulemotion/linux-artik.git;protocol=ssh;branch=artik"
+SRC_URI = "git://git@bitbucket.org/rulemotion/linux-artik.git;protocol=ssh;branch=artik-next"
 
-SRCREV = "630456f987daef7e342917e91730e777a8032809"
+SRCREV = "4097fccd4576dd96c8cc40bb50458596e0cc58ee"
 
 inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
