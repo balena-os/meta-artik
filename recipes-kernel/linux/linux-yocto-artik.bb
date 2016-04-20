@@ -2,7 +2,10 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 LINUX_VERSION = "3.10.9"
 
-SRC_URI = "git://git@bitbucket.org/rulemotion/linux-artik.git;protocol=ssh;branch=artik-next"
+SRC_URI = " \
+    git://git@bitbucket.org/rulemotion/linux-artik.git;protocol=ssh;branch=artik-next \
+    file://0001-Btrfs-fix-not-being-able-to-find-skinny-extents-duri.patch \
+    "
 
 SRCREV = "4097fccd4576dd96c8cc40bb50458596e0cc58ee"
 
