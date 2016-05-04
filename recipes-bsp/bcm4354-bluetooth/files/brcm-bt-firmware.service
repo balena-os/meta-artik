@@ -1,0 +1,11 @@
+[Unit]
+Description=BCM4354 Bluetooth firmware download and configuration service
+Before=bluetooth.target
+
+[Service]
+Type=forking
+ExecStart=/etc/bluetooth/fwdown.sh
+PIDFILE=/run/brcm_patchram_plus.pid
+
+[Install]
+WantedBy=multi-user.target

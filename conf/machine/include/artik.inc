@@ -7,7 +7,7 @@ MACHINE_FEATURES += " bluetooth pci rtc ethernet serial usbgadget wifi"
 
 KERNEL_IMAGETYPE = "zImage"
 
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "bcm4354-nvram-config"
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "bcm4354-bt bcm4354-nvram-config"
 
 KERNEL_MODULE_AUTOLOAD += "dhd"
 KERNEL_MODULE_PROBECONF += "dhd"
