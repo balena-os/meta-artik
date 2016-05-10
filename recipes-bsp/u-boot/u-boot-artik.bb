@@ -8,12 +8,10 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=1707d6db1d42237583f50183a5651ecb"
 
 PROVIDES += "u-boot"
 
-SRCREV = "5430e192095d05a01eb610df30990b8e2c7a6104"
+SRCREV = "436b4ae23aba34d44ac6a6f23d9f2770c6409536"
 
 SRC_URI = " \
-    git://git@bitbucket.org/rulemotion/u-boot-artik.git;protocol=ssh;branch=artik \
-    file://0001-uboot-support-gcc5.patch \
-    file://0002-use-gcc-inline-version.patch \
+    git://github.com/SamsungARTIK/u-boot-artik.git;protocol=https;branch=artik-exynos/v2012.07 \
     file://0003-fix-single-sdfuse-flash-command.patch \
     "
 
