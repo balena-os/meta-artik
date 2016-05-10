@@ -3,11 +3,11 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 LINUX_VERSION = "3.10.9"
 
 SRC_URI = " \
-    git://git@bitbucket.org/rulemotion/linux-artik.git;protocol=ssh;branch=artik-next \
+    git://github.com/SamsungARTIK/linux-artik.git;protocol=https;branch=artik-exynos/v3.10.x \
     file://0001-Btrfs-fix-not-being-able-to-find-skinny-extents-duri.patch \
     "
 
-SRCREV = "4097fccd4576dd96c8cc40bb50458596e0cc58ee"
+SRCREV = "84a5d7636d3bdb0eb0c2385d973b9471d3681917"
 
 inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
