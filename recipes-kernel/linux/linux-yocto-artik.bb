@@ -6,6 +6,7 @@ SRC_URI = " \
     git://github.com/SamsungARTIK/linux-artik.git;protocol=https;branch=artik-exynos/v3.10.x \
     file://0001-Btrfs-fix-not-being-able-to-find-skinny-extents-duri.patch \
     file://fix_autoload_asix_module.patch \
+    file://compile_kernel_out_of_tree.patch \
     "
 
 SRCREV = "84a5d7636d3bdb0eb0c2385d973b9471d3681917"
