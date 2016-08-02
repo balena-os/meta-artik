@@ -17,11 +17,6 @@ PV = "${LINUX_VERSION}+git${SRCPV}"
 
 S = "${WORKDIR}/git"
 
-# for artik 5 and artik 10 we build the kernel in the source tree
-B = "${S}"
-
-do_configure_prepend() {
-    rm ${B}/.config
-}
+KCONFIG_MODE="--alldefconfig"
 
 COMPATIBLE_MACHINE = "(artik5|artik10)"
