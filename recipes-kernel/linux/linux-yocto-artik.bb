@@ -9,6 +9,8 @@ SRC_URI = " \
     file://compile_kernel_out_of_tree.patch \
     "
 
+SRC_URI_append_kitra520 = " file://0001-Add-support-for-kitra520.patch"
+
 SRCREV = "84a5d7636d3bdb0eb0c2385d973b9471d3681917"
 
 inherit kernel
@@ -20,4 +22,4 @@ S = "${WORKDIR}/git"
 
 KCONFIG_MODE="--alldefconfig"
 
-COMPATIBLE_MACHINE = "(artik5|artik10)"
+COMPATIBLE_MACHINE = "(artik5|artik10|kitra520)"
