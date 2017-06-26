@@ -8,7 +8,7 @@ SRC_URI = " \
     file://0002-mali-Fix-out-of-tree-compile-errors.patch \
     "
 
-SRC_URI_append_kitra520 = " file://0001-Add-support-for-kitra520.patch"
+SRC_URI_append_kitra520 = " file://0003-Add-support-for-kitra520.patch"
 
 SRCREV = "1f6a3a15adb16a94e2f967c73d5ab35a113bd438"
 
