@@ -51,6 +51,6 @@ do_compile_append() {
 }
 
 do_deploy_append () {
-    install ${S}/params_emmc.bin ${DEPLOYDIR}
-    install ${S}/params_sd.bin ${DEPLOYDIR}
+    install ${B}/params_emmc.bin ${DEPLOYDIR}
+    install ${B}/params_sd.bin ${DEPLOYDIR}
 }
