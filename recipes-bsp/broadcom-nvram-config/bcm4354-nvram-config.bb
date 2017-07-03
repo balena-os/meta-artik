@@ -14,6 +14,7 @@ BRCM_FWDIR = "/lib/firmware/brcm"
 
 do_install() {
     install -d ${D}${BRCM_FWDIR}
+    # use the firmware settings Samsung delivered in the release A520_OS_2.0.0-sdfuse.img
     cp -r ${WORKDIR}/brcmfmac4354-sdio.txt ${D}${BRCM_FWDIR}
 }
 
