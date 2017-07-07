@@ -5,7 +5,7 @@ Before=bluetooth.target
 [Service]
 Type=forking
 ExecStart=/etc/bluetooth/fwdown.sh
-PIDFILE=/run/brcm_patchram_plus.pid
+PIDFile=/run/brcm_patchram_plus.pid
 
 [Install]
 WantedBy=multi-user.target
