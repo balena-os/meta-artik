@@ -12,12 +12,16 @@ SRC_URI = " \
     file://brcm_patchram_plus \
     file://fwdown.sh \
     file://hciconf.sh \
+    file://rfkill-unblock.service \
     "
 S = "${WORKDIR}"
 
 inherit systemd
 
-SYSTEMD_SERVICE_${PN} = "brcm-bt-firmware.service"
+SYSTEMD_SERVICE_${PN} = " \
+    brcm-bt-firmware.service \
+    rfkill-unblock.service \
+    "
 
 RDEPENDS_${PN} = " \
     bluez5 \
@@ -32,13 +36,13 @@ do_install() {
 
         if ${@bb.utils.contains('DISTRO_FEATURES','systemd','true','false',d)}; then
             install -d ${D}${systemd_unitdir}/system
-            install -c -m 0644 ${WORKDIR}/brcm-bt-firmware.service ${D}${systemd_unitdir}/system
+            install -c -m 0644 ${WORKDIR}/brcm-bt-firmware.service ${WORKDIR}/rfkill-unblock.service ${D}${systemd_unitdir}/system
             sed -i -e 's,@BASE_BINDIR@,${base_bindir},g' \
                 -e 's,@BASE_SBINDIR@,${base_sbindir},g' \
                 -e 's,@SBINDIR@,${sbindir},g' \
                 -e 's,@BINDIR@,${bindir},g' \
                 -e 's,@SYS_CONFDIR@,${sysconfdir},g' \
-                ${D}${systemd_unitdir}/system/brcm-bt-firmware.service
+                ${D}${systemd_unitdir}/system/brcm-bt-firmware.service ${D}${systemd_unitdir}/system/rfkill-unblock.service
         fi
 }
 
