@@ -41,13 +41,13 @@ IMAGE_ROOTFS_ALIGNMENT = "4096"
 SDIMG_ROOTFS_TYPE ?= "ext4"
 SDIMG_ROOTFS = "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.${SDIMG_ROOTFS_TYPE}"
 
-IMAGE_DEPENDS_artik-sdimg = " \
-			parted-native \
-			mtools-native \
-			dosfstools-native \
-			e2fsprogs-native \
-			virtual/kernel \
-			u-boot \
+do_image_artik_sdimg[depends] = " \
+			parted-native:do_populate_sysroot \
+			mtools-native:do_populate_sysroot \
+			dosfstools-native:do_populate_sysroot \
+			e2fsprogs-native:do_populate_sysroot \
+			virtual/kernel:do_deploy \
+			u-boot:do_deploy \
 			"
 # Exynos Boot magic
 BL1_SYMLINK ?= "bl1.bin"
