@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_artik5 = " \
+SRC_URI_artik520 = " \
     file://bl1.bin \
     file://bl2.bin \
     file://tzsw.bin \
