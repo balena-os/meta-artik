@@ -19,7 +19,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-COMPATIBLE_MACHINE = "(artik5|artik10)"
+COMPATIBLE_MACHINE = "(artik520|artik10)"
 
 RDEPENDS_${PN} = "secure-boot-artik"
 ROOTPART ?= "2"
