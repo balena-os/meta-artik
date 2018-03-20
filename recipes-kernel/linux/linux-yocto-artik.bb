@@ -21,4 +21,4 @@ S = "${WORKDIR}/git"
 
 KCONFIG_MODE="--alldefconfig"
 
-COMPATIBLE_MACHINE = "(artik5|artik10|kitra520)"
+COMPATIBLE_MACHINE = "(artik520|artik10|kitra520)"
