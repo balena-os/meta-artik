@@ -26,4 +26,4 @@ RDEPENDS_${PN} = "linux-firmware-bcm4354"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "(artik520|artik10)"
+COMPATIBLE_MACHINE = "(artik5|artik10)"
