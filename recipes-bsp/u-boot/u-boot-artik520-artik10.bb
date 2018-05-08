@@ -1,4 +1,4 @@
-# Samsung Artik 5 and Artik 10 u-boot
+# Samsung Artik 520 and Artik 10 u-boot
 
 require recipes-bsp/u-boot/u-boot.inc
 
