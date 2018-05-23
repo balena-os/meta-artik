@@ -20,6 +20,8 @@ SRC_URI_artik10 = " \
 
 inherit deploy
 
+RPROVIDES = "secure-boot-artik"
+
 S = "${WORKDIR}"
 
 do_patch[noexec] = "1"
@@ -35,4 +37,5 @@ do_deploy () {
 
 addtask deploy before do_build after do_compile
 
+COMPATIBLE_MACHINE = "(artik520|artik10)"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
