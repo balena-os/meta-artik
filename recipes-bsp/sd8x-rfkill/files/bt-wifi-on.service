@@ -1,0 +1,12 @@
+[Unit]
+Description=Marvell BT/WiFi combo power on
+Before=wpa_supplicant.service bluetooth.target pulseaudio.service
+After=rfkill-unblock.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo 1 > /sys/devices/platform/sd8x-rfkill/pwr_ctrl"
+#ExecStartPost=/etc/bluetooth/hciconf.sh
+
+[Install]
+WantedBy=multi-user.target
