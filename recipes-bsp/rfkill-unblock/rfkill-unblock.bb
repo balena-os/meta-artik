@@ -27,6 +27,6 @@ do_install() {
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "(artik520|artik533s|artik10)"
+COMPATIBLE_MACHINE = "(artik520|artik530|artik533s|artik10)"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
