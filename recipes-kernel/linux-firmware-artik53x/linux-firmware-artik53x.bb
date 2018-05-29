@@ -1,4 +1,4 @@
-DESCRIPTION = "Firmware for Samsung Artik 530 1G (a.k.a. 533s) BT/WiFi"
+DESCRIPTION = "BT/WiFi firmware for Samsung Artik 530 family"
 SECTION = "connectivity"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
@@ -26,6 +26,6 @@ FILES_${PN} = "/lib/firmware/mrvl/"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "(artik533s)"
+COMPATIBLE_MACHINE = "(artik530|artik533s)"
 
 #INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
