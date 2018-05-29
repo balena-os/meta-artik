@@ -21,7 +21,7 @@ S = "${WORKDIR}/git"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 COMPATIBLE_MACHINE = "(artik520|artik10)"
 
-RDEPENDS_${PN} = "secure-boot-artik"
+RDEPENDS_${PN} = "boot-firmware-artik"
 ROOTPART ?= "2"
 
 do_compile_append() {
