@@ -44,7 +44,7 @@ do_install() {
             -e 's,@SBINDIR@,${sbindir},g' \
             -e 's,@BINDIR@,${bindir},g' \
             -e 's,@SYS_CONFDIR@,${sysconfdir},g' \
-            ${D}${systemd_unitdir}/system/brcm-bt-firmware.service \
+            ${D}${systemd_unitdir}/system/brcm-bt-firmware.service
     fi
 }
 
