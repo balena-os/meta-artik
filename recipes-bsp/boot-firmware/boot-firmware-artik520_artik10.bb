@@ -1,4 +1,4 @@
-DESCRIPTION = "Samsung secure bootloader for Artik 5 and Artik 10 devices"
+DESCRIPTION = "Samsung bootloader firmware for Artik 5 and Artik 10 devices"
 SECTION = "bootloaders"
 LICENSE = "GPLv2"
 
@@ -20,7 +20,7 @@ SRC_URI_artik10 = " \
 
 inherit deploy
 
-RPROVIDES = "secure-boot-artik"
+RPROVIDES_${PN} = "boot-firmware-artik"
 
 S = "${WORKDIR}"
 
