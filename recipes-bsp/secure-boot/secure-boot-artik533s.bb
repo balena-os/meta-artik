@@ -15,6 +15,8 @@ inherit deploy
 
 S = "${WORKDIR}"
 
+DEPENDS += "boot-firmware-artik53x"
+
 do_patch[noexec] = "1"
 do_configure[noexec] = "1"
 do_compile[noexec] = "1"
@@ -25,7 +27,7 @@ do_deploy () {
     install -m 755  ${WORKDIR}/secureos.img ${DEPLOYDIR}
 
     # gen_nexell_image_mon
-    ${WORKDIR}/artik533s_codesigner -sign ${DEPLOYDIR}/bl_mon.img
+    ${WORKDIR}/artik533s_codesigner -sign ${DEPLOY_DIR_IMAGE}/bl_mon.img
 
     # gen_nexell_image_secure
     ${WORKDIR}/artik533s_codesigner -sign ${DEPLOYDIR}/secureos.img
