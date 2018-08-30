@@ -1,7 +1,7 @@
 SUMMARY = "Samsung Artik 530 and Artik 530s 1G (a.k.a. Artik 533s) kernel"
 DESCRIPTION = "artik530 and artik533s machine kernel provided by Samsung"
 
-LINUX_VERSION_artik530 = "4.4.71"
+LINUX_VERSION_artik530 = "4.4.113"
 LINUX_VERSION_artik533s = "4.4.113"
 
 SRC_URI_artik530 = "git://github.com/SamsungARTIK/linux-artik.git;protocol=https;branch=A530-OS-18.05.00"
