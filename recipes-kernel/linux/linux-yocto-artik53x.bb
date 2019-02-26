@@ -1,6 +1,12 @@
 SUMMARY = "Samsung Artik 530 and Artik 530s 1G (a.k.a. Artik 533s) kernel"
 DESCRIPTION = "artik530 and artik533s machine kernel provided by Samsung"
 
+FILESEXTRAPATHS_append := ":${THISDIR}/files"
+
+SRC_URI_append = " \
+    file://0004-bq2429xx_Enable_charging.patch \
+    "
+
 LINUX_VERSION_artik530 = "4.4.113"
 LINUX_VERSION_artik533s = "4.4.159"
 

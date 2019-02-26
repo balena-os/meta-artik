@@ -1,0 +1,33 @@
+From ed031fdf45e72712ff7770d2f3795fd350c09691 Mon Sep 17 00:00:00 2001
+From: Vicentiu Galanopulo <vicentiu@balena.io>
+Date: Mon, 25 Feb 2019 15:34:39 +0100
+Subject: [PATCH] bq2429xx_charger.c: Remove line which disables charging
+
+Charger was disabled because it has not been tested.
+It was enabled because the Artik533s uses this feature
+and testing can be done.
+
+Upstream-Status: Inappropriate [configuration specific]
+
+Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+---
+ drivers/power/bq2429x_charger.c | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/drivers/power/bq2429x_charger.c b/drivers/power/bq2429x_charger.c
+index 1121e58..97e0209 100644
+--- a/drivers/power/bq2429x_charger.c
++++ b/drivers/power/bq2429x_charger.c
+@@ -588,9 +588,6 @@ static int bq24296_battery_probe(struct i2c_client *client,
+ 	/* setting input current limit to 3A for DC charging */
+ 	bq24296_update_input_current_limit(IINLIM_3000MA);
+ 
+-	/* Disable chagrer */
+-	bq24296_update_charge_mode(CHARGE_MODE_CONFIG_CHARGE_DISABLE);
+-
+ 	/* Set VSYS_MIN to 3.7V */
+ 	bq24296_update_vsys_min(VSYSMIN_3P7);
+ 
+-- 
+2.7.4
+
