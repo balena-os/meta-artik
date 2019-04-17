@@ -1,0 +1,29 @@
+From a550fab2e08e976efe04b5b85b9ed11ec1cf731b Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Tue, 16 Apr 2019 14:34:35 +0200
+Subject: [PATCH] spi: Remove delay in spi_transfer_one_message()
+
+As requested by customer
+
+Upstream-Status: Inappropriate [configuration specific]
+
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ drivers/spi/spi.c | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/drivers/spi/spi.c b/drivers/spi/spi.c
+index 483f031..0135535 100644
+--- a/drivers/spi/spi.c
++++ b/drivers/spi/spi.c
+@@ -1013,7 +1013,6 @@ static int spi_transfer_one_message(struct spi_master *master,
+ 				keep_cs = true;
+ 			} else {
+ 				spi_set_cs(msg->spi, false);
+-				udelay(10);
+ 				spi_set_cs(msg->spi, true);
+ 			}
+ 		}
+-- 
+2.7.4
+
